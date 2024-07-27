@@ -1,0 +1,15 @@
+...(q.cat && {cat:q.cat}),
+
+In the context of a query object in JavaScript, the spread operator (...) is used to conditionally 
+add properties to an object based on certain conditions. This can be very useful for constructing dynamic queries.
+The expression ...(q.cat && { cat: q.cat }) works as follows:
+q.cat: This checks if q.cat is truthy. If q.cat is not null, undefined, 0, false, NaN, or an empty string, 
+it evaluates to true.
+{ cat: q.cat }: If q.cat is truthy, this creates an object with the property cat set to the value of q.cat.
+...(q.cat && { cat: q.cat }): If q.cat is truthy, the spread operator will spread the properties of { cat: q.cat }
+ into the surrounding object. If q.cat is falsy, it will spread nothing (i.e., it effectively does nothing).
+This allows for the conditional inclusion of the cat property in the query object.
+
+
+
+
